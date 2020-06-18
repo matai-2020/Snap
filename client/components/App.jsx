@@ -3,31 +3,25 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 // COMPONENTS
 import Profile from './Profile'
+import Home from './Home'
 // DATA
 import dex from '../../data.js'
 
 const App = () => {
-  const dexName = dex
+  
 
-  console.log(dexName)
+  // console.log(dexName)
   return (
     <div>
-      <div>
-        <img src={'/images/devdex.png'} />
-      </div>
-      <div>
-        <img src={'/images/closedpb.png'} className='closedpb' />
-        <ul>
-          { dexName.map(user => {
-            return (
-              <li key={user.id}>
-                <Link to={`/profile/${user.name}`}>{user.name}</Link>
+      <Route exact path='/' component={Home}/>
+      <Route exact path={'/profile/:name'} render={() => {
+        return (
+          <>
+            <Profile data={dex} />
+          </>
+        )
+      }} />
 
-              </li>
-            )
-          }) }
-        </ul>
-      </div>
     </div>
   )
 }

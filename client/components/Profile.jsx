@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import dex from '../../data'
 
 const Profile = (props) => {
-  const id = Number(props.match.params.id)
+  const id = Number(props.params.id)
   const details = dex.filter(item => item.id === id)[0]
 
   return (
