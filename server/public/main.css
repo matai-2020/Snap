@@ -1,3 +1,9 @@
 body {
     background-color: bisque;
 }
+
+.closedpb {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+}
