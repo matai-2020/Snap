@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 import dex from '../../data'
 
-const Profile = (props) => {
-  const id = Number(props.params.id)
+const Profile = (match) => {
+  const id = Number(match.params.id)
   const details = dex.filter(item => item.id === id)[0]
 
   return (
@@ -18,7 +18,7 @@ const Profile = (props) => {
         <h3>Your pokemon is {details.pokemon[0]}!</h3>
         {details.description[0]}
       </p>
-      <Link to={`${props.url}/showMore`}>Show More</Link>
+      <Link to={`${match.url}/showMore`}>Show More</Link>
       <Route path={`/profile/${details.name}/`} component={ShowMore} />
     </div>
     </>
