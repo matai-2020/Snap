@@ -1,4 +1,6 @@
 import React from 'react'
+import Profile from './Profile'
+import dex from '../../data.js'
 
 const App = () => {
   return (
