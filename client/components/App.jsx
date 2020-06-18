@@ -4,6 +4,7 @@ import { Link, Route } from 'react-router-dom'
 // COMPONENTS
 import Profile from './Profile'
 import Home from './Home'
+import Dex from './Dex'
 // DATA
 import dex from '../../data.js'
 
@@ -14,14 +15,8 @@ const App = () => {
   return (
     <div>
       <Route exact path='/' component={Home}/>
-      <Route exact path={'/profile/:name'} render={() => {
-        return (
-          <>
-            <Profile data={dex} />
-          </>
-        )
-      }} />
-
+      <Route path={'/dex'} component={Dex} />
+      <Route exact path={'/profile/:name'} component={Profile} />
     </div>
   )
 }
