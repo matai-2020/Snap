@@ -210,3 +210,5 @@ const dex = [
     ] }
 
 ]
+
+export default dex
