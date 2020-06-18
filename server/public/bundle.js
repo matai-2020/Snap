@@ -109,19 +109,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  // const dexName = dex
-  // <ul>
-  // { dexName.map(user => {
-  //   <li key={user.id}><Link to={`/user/:${name}`}>{user.name}</Link> </li>
-  // }) }
-  // </ul>
-  // console.log(dexName)
+  var dexName = _data_js__WEBPACK_IMPORTED_MODULE_3__["default"];
+  console.log(dexName);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: '/images/devdex.png'
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: '/images/closedpb.png',
     className: "closedpb"
-  })));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, dexName.map(function (user) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: user.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/profile/".concat(user.name)
+    }, user.name));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -145,15 +146,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Profile = function Profile(_ref) {
-  var match = _ref.match;
-  var id = Number(match.params.id);
+var Profile = function Profile(props) {
+  var id = Number(props.match.params.id);
   var details = _data__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (item) {
     return item.id === id;
   })[0];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, details.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hello"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, details.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: details.image[0]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Your pokemon is ", details.pokemon[0], "!"), details.description[0])));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Your pokemon is ", details.pokemon[0], "!"), details.description[0]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "".concat(props.url, "/showMore")
+  }, "Show More"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Route, {
+    path: "/profile/".concat(details.name, "/"),
+    component: ShowMore
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Profile);
