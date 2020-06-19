@@ -23,6 +23,12 @@ const Dex = () => {
             )
           }) }
         </ul>
+        <div className='link'>
+          <Link to='/add'>New Trainers? Register Here!</Link>
+        </div>
+        <div className='link'>
+          <Link to='/'>Home</Link>
+        </div>
       </div>
     </div>
 
