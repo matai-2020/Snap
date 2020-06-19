@@ -18,7 +18,7 @@ const Dex = () => {
           { dexName.map(user => {
             return (
               <li key={user.id} className='listitems'>
-                <Link to={`/profile/${user.name}`}>{user.name}</Link>
+                <Link to={`/profile/${user.name}`} >{user.name}</Link>
               </li>
             )
           }) }
