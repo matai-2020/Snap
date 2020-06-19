@@ -20,6 +20,10 @@ const Profile = ({ match }) => {
         Show More
       </Link>
     </div>
+<!--  CHANGES      -->
+    <div className='link'>
+       <Link to='/'>Home</Link>
+     </div>
     </>
   )
 }
