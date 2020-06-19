@@ -10,13 +10,16 @@ const Profile = ({ match }) => {
 
   return (
     <>
-    <div>
+    <div className='profileContainer'>
       <h1>{details.name}</h1>
+
       <img src={`/images/${details.image[0]}`} />
-      <h3>{details.name}s pokemon is {details.pokemon[0]}!</h3>
-      {details.description[0]}
-      {/* <Link to={`${props.url}/showMore`}>Show More</Link>
-      <Route path={`/profile/${details.name}/`} component={ShowMore} /> */}
+      <h3>{details.name}&apos;s pokemon is {details.pokemon[0]}!</h3>
+      <p>{details.description[0]}</p>
+
+      <Link to={`${match.url}/showMore`}>
+        Show More
+      </Link>
     </div>
     </>
   )
