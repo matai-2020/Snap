@@ -1,5 +1,19 @@
 body {
-    background-color: bisque;
+    text-align: center;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+.main {
+  background-color: gray;
+}
+
+.title {
+  margin-top: 15vh;
+}
+
+li {
+  text-decoration: none;
 }
 
 .closedpb {
@@ -11,8 +25,7 @@ body {
 .openpb {
   width: 100%;
   height: auto;
-  max-width: 300px;
-  display: none;
+  max-width: 200px;
 }
 
 .closedpb:hover {
