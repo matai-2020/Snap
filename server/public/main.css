@@ -19,6 +19,9 @@ body {
   background-color: rgb(65, 65, 65);
   border-radius: 5pt;
   margin-top: 20px;
+  box-shadow:
+  0 1.5px 5.6px rgba(231, 231, 231, 0.52)
+;
 }
 
 .listitems {
@@ -32,7 +35,7 @@ body {
   cursor: pointer;
   width: 100px;
   box-shadow:
-  0 1.5px 5.6px rgba(231, 231, 231, 0.52)
+  0 1.5px 5.6px rgba(173, 173, 173, 0.52)
 ;
 
 }
