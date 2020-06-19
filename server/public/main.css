@@ -19,6 +19,9 @@ body {
   background-color: rgb(65, 65, 65);
   border-radius: 5pt;
   margin-top: 20px;
+  box-shadow:
+  0 1.5px 5.6px rgba(231, 231, 231, 0.52)
+;
 }
 
 .listitems {
@@ -32,7 +35,7 @@ body {
   cursor: pointer;
   width: 100px;
   box-shadow:
-  0 1.5px 5.6px rgba(231, 231, 231, 0.52)
+  0 1.5px 5.6px rgba(173, 173, 173, 0.52)
 ;
 
 }
@@ -77,6 +80,7 @@ a {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
+
   .profileContainer {
     color: white;
     list-style: none;
@@ -89,4 +93,27 @@ a {
     width: auto;
     box-shadow:
     0 1.5px 5.6px rgba(231, 231, 231, 0.52)
+
+  input {
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 1.5rem;
+    width: 20%;
+    height: 10%;
+    border-radius: 5pt;
+    margin-top: 60px;
+    background-color: rgb(65, 65, 65);
+  }
+
+  .link {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    width: 30%;
+    height: 10%;
+    border-radius: 5pt;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: rgb(65, 65, 65);
+    box-shadow:
+    0 1.5px 5.6px rgba(173, 173, 173, 0.52);
   }
