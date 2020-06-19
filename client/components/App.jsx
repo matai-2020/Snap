@@ -5,7 +5,11 @@ import { Link, Route } from 'react-router-dom'
 import Profile from './Profile'
 import Home from './Home'
 import Dex from './Dex'
+
+import ShowMore from './ShowMore'
+
 import Add from './Add'
+
 // DATA
 
 const App = () => {
@@ -14,8 +18,11 @@ const App = () => {
     <div>
       <Route exact path='/' component={Home}/>
       <Route path={'/dex'} component={Dex} />
-      <Route exact path={'/profile/:name'} component={Profile} />
+
+      <Route path={'/profile/:name'} component={Profile} />
+      <Route path={'/profile/:name/showMore'} component={ShowMore} /> 
       <Route path={'/add'} component={Add} />
+
     </div>
   )
 }
